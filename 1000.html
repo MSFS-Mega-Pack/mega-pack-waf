@@ -24,6 +24,12 @@
         font-size: 20px;
       }
 
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       h1 {
         font-size: 4.5rem;
         margin-bottom: 1rem;
@@ -32,11 +38,19 @@
 
       main {
         max-width: 640px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        width: 100%;
         text-align: center;
+        padding: 32px;
+      }
+
+      @media (max-width: 400px) {
+        main {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
       }
 
       a:any-link {
@@ -45,8 +59,27 @@
       }
 
       summary {
-        opacity: 0.6;
+        opacity: 0.8;
         cursor: pointer;
+      }
+
+      details *:not(summary) {
+        font-size: 16px;
+        text-align: left;
+      }
+
+      details h1 {
+        font-size: 2em;
+      }
+
+      details ul {
+        font-size: 14px;
+      }
+
+      details > div {
+        margin-top: 4px;
+        background-color: #ddd;
+        padding: 8px 16px;
       }
     </style>
   </head>
